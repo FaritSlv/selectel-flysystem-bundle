@@ -1,9 +1,19 @@
 {
-    "name": "creative/selectel-flysystem-bundle",
+    "name": "farit-slv/selectel-flysystem-bundle",
     "type": "symfony-bundle",
     "description": "Bundle for selectel's api",
     "keywords": [],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Creative LLC.",
+            "email": "admin@crtweb.ru"
+        },
+        {
+            "name": "Farit",
+            "email": "function.best@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=7.3.0",
         "league/flysystem": "^1.0",
