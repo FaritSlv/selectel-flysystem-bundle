@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  php-fpm:
+    build:
+      context: ./.docker/php-fpm
+    volumes:
+      - ./.docker/php-fpm/php.ini:/etc/php/7.4/fpm/conf.d/10-docker-php.ini
+      - ./:/var/www:cached
+    tty: true
+    ports:
+      - "9100:9090"

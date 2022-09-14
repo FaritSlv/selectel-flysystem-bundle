@@ -74,7 +74,7 @@ class SelectelService implements ServiceInterface
         }
 
         $file = $this->normalizeFileName($file);
-        $stream = \GuzzleHttp\Psr7\stream_for($resource);
+        $stream = \GuzzleHttp\Psr7\Utils::streamFor($resource);
         $response = $this->requestAuthorized('put', $file, [
             RequestOptions::BODY => $stream,
         ]);
@@ -109,7 +109,7 @@ class SelectelService implements ServiceInterface
         $file = $this->normalizeFileName($file);
         $temp = tmpfile();
 
-        $stream = \GuzzleHttp\Psr7\stream_for($temp);
+        $stream = \GuzzleHttp\Psr7\Utils::streamFor($temp);
         $response = $this->requestAuthorized('get', $file, [
             RequestOptions::SINK => $stream,
         ]);
